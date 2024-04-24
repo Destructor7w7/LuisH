@@ -1,0 +1,56 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+    padding: 0%;
+}
+.barTop{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.menu{
+    padding: 10px 20px;
+    border: 1px solid black
+}
+.containerImg {
+    display: flex;
+    width: 100%;
+    background-image: url('../IMG/Fondo.jpg'); /* URL de tu imagen de fondo */
+    background-size: cover;    /* Cubre completamente el contenedor sin perder la proporción */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+  }
+  
+  .leftSide, .rightSide {
+    height: auto;
+    overflow: hidden;
+    flex: 1; /* Asegura que cada lado se expanda para ocupar el espacio asignado */
+  }
+  
+  .leftSide {
+    width: 70%;
+  }
+  
+  .rightSide {
+    width: 30%;
+  }
+  
+  .containerImg img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Cambia el color según tu preferencia */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    margin-bottom: 10px; /* Agrega un margen inferior para separarlo del subtítulo */
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    color: #666; /* Cambia el color según tu preferencia */
+    font-style: italic; /* Puede añadir un estilo cursivo al subtítulo */
+  }
