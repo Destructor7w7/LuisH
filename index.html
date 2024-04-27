@@ -1,29 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/Estilos.css">
-  <title>Luis H</title>
+  <title>Barra de Navegación</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
 </head>
 <body>
-  
-  <div class="contenedor">
-    <div class="barTop">
-      <div class="menu Logo">Logo</div>
-      <div class="menu Medio">Medio</div>
-      <div class="menu MENU">Menu</div>
-  </div>
-  <div class="containerImg">
-    <div class="leftSide">
-      
-      <div class="title">LUIS HERNANDEZ</div>
-      <div class="subtitle">Programador Full Stack</div>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img id="logo" src="IMG/Destroid1.webp" alt="Logo" height="100">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Experiencia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Educación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="rightSide">
-      <img src="url_de_tu_imagen_pequeña.jpg" alt="Descripción de la imagen pequeña">
-    </div>
-  </div>
-  
+  </nav>
+</header>
+<script>
+  // Obtiene la imagen por su ID
+  var logo = document.getElementById('logo');
+
+  // Función para cambiar la imagen y rotar al pasar el mouse sobre ella
+  logo.addEventListener('mouseenter', function() {
+    // Verifica qué imagen está actualmente en uso
+    if (logo.src.includes('Destroid1.webp')) {
+      // Si es la primera imagen, cambia a la segunda
+      logo.src = 'IMG/Destroid2.webp';
+    } else {
+      // Si es la segunda imagen, cambia a la primera
+      logo.src = 'IMG/Destroid1.webp';
+    }
+
+    // Rota la imagen 360 grados
+    logo.style.transform = 'rotate(360deg)';
+  });
+
+  // Restablece la rotación y la imagen original al quitar el mouse de la imagen
+  logo.addEventListener('mouseleave', function() {
+    logo.style.transform = 'rotate(0deg)';
+    logo.src = 'IMG/Destroid1.webp'; // Cambia a la primera imagen cuando el mouse se va
+  });
+</script>
+<main>
+  <!-- Contenido principal de la página -->
+</main>
+
+<script>
+  // Cambiar el logo cuando se desplaza hacia abajo
+  window.addEventListener('scroll', function() {
+    var logo = document.getElementById('logo');
+    if (window.scrollY > 50) {
+      logo.src = 'IMG/Destroid1.webp';
+    } else {
+      logo.src = 'IMG/Destroid1.webp';
+    }
+  });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

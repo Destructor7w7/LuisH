@@ -1,56 +1,101 @@
-*{
-    margin: 0%;
-    box-sizing: border-box;
-    padding: 0%;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.barTop{
-    background-color: rgb(255, 255, 255);
+
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.contenedor {
+  width: 100%;
+}
+.navbar {
+  width: 100%;
+}
+
+.barTop {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.menu.logo {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.logo-normal, .logo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.logo-hover {
+  opacity: 0;
+}
+
+.menu.logo:hover .logo-normal {
+  opacity: 0;
+}
+
+.menu.logo:hover .logo-hover {
+  opacity: 1;
+}
+
+/* Menú responsivo */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  background-color: white;
+  height: 2px;
+  width: 25px;
+  margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-.menu{
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    flex-direction: column;
+    top: 60px;
+    left: 0;
+    right: 0;
+  }
+
+  .menu-toggle:checked + .menu-icon + .nav-list {
+    display: flex;
+  }
+
+  .nav-list li {
+    text-align: center;
     padding: 10px 20px;
-    border: 1px solid black
+    border-top: 1px solid #000000;
+  }
 }
-.containerImg {
-    display: flex;
-    width: 100%;
-    background-image: url('../IMG/Fondo.jpg'); /* URL de tu imagen de fondo */
-    background-size: cover;    /* Cubre completamente el contenedor sin perder la proporción */
-    background-position: center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-  }
-  
-  .leftSide, .rightSide {
-    height: auto;
-    overflow: hidden;
-    flex: 1; /* Asegura que cada lado se expanda para ocupar el espacio asignado */
-  }
-  
-  .leftSide {
-    width: 70%;
-  }
-  
-  .rightSide {
-    width: 30%;
-  }
-  
-  .containerImg img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333; /* Cambia el color según tu preferencia */
-    text-transform: uppercase; /* Convierte el texto en mayúsculas */
-    margin-bottom: 10px; /* Agrega un margen inferior para separarlo del subtítulo */
-  }
-  
-  .subtitle {
-    font-size: 18px;
-    color: #666; /* Cambia el color según tu preferencia */
-    font-style: italic; /* Puede añadir un estilo cursivo al subtítulo */
-  }
