@@ -63,13 +63,11 @@
       logo.src = 'IMG/Destroid1.webp';
     }
 
-    // Rota la imagen 360 grados
-    logo.style.transform = 'rotate(360deg)';
+ 
   });
 
   // Restablece la rotación y la imagen original al quitar el mouse de la imagen
   logo.addEventListener('mouseleave', function() {
-    logo.style.transform = 'rotate(0deg)';
     logo.src = 'IMG/Destroid1.webp'; // Cambia a la primera imagen cuando el mouse se va
   });
 </script>
