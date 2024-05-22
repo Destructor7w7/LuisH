@@ -5,8 +5,8 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to(".navbar", {
   y: 0,
   opacity: 1,
-  duration: 1.2,
-  ease: "bounce.out"
+  duration: 1,
+  ease: "power1.inOut"
 });
 
 // Ejemplo de animación que se dispara al hacer scroll

@@ -83,16 +83,62 @@ body {
 }
 
 /* Contendio de la pagina */
-.contenido{
+/* Contendio de la pagina */
+.contenido {
   background-color: aliceblue;
-  transition: background-image 1s ease;
   padding-top: 5%;
   padding-bottom: 5%;
+  position: relative;
+  overflow: hidden;
 }
-.contenido:hover {
-  background-image: url(../IMG/Fondo-Claro.gif);
+
+.contenido::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../IMG/Fondo-Claro.gif'); /* Reemplaza con la URL correcta de tu GIF */
   background-size: cover;
-  opacity: 0.8;
+  opacity: 1;
+  animation: playGif 3s forwards; /* Ajusta la duración según la duración de tu GIF */
+}
+
+@keyframes playGif {
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    flex-direction: column;
+    top: 60px;
+    left: 0;
+    right: 0;
+  }
+
+  .menu-toggle:checked + .menu-icon + .nav-list {
+    display: flex;
+  }
+
+  .nav-list li {
+    text-align: center;
+    padding: 10px 20px;
+    border-top: 1px solid #000000;
+  }
 }
 
 @media (max-width: 768px) {

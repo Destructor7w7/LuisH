@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="CSS/Estilos.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -52,12 +53,12 @@
 <script src="Js/main.js"></script>
 
 
-<main class="contenido" id="video-container" >
+<main class="contenido" id="Contenido" >
   <div class="container mt-0">
     <div class="row">
       <div class="col-lg-10 mx-auto">
         <h1 class="text-center display-4" style="color: #333;">Experto en Tecnología y Multimedia</h1>
-        <h1 class="text-center small-title" style="font-size: 2rem; color: #666;">Gestor de Proyectos Digitales</h1>
+        <h2 class="text-center small-title" style="font-size: 2rem; color: #666;">Gestor de Proyectos Digitales</h2>
         <p class="lead text-center text-justify">
           Técnico, Tecnólogo en sistemas y producción en multimedia, estudiante de 
           ingeniería en sistemas, con conocimientos en; Instalación de BIOS, 
@@ -71,33 +72,66 @@
   </div>
 
 </main>
-<div class="container mt-3">
+
+<div class="container mt-5">
   <div class="row">
     <div class="col-lg-10 mx-auto">
-      <h2 class="text-center">Categorías</h2>
       <div class="row">
         <div class="col-md-4 text-center">
-          <h3 class="text-primary" style="font-size: 1.5rem;">Herramientas de Oficina</h3>
-          <i class="fas fa-file-alt fa-2x text-primary"></i> <!-- Icono de Documento -->
-          <i class="fas fa-table fa-2x text-primary"></i> <!-- Icono de Tabla -->
-          <i class="fas fa-calendar-alt fa-2x text-primary"></i> <!-- Icono de Calendario -->
+          <h3 class="text" style="font-size: 1rem;">Herramientas de Oficina</h3>
+          <img class="icono" src="ICO/Microsoft.svg" alt="Microsoft Office"> <!-- Icono personalizado de Microsoft Office -->
+          <img class="icono" src="ICO/Notion.svg" alt="Notion"> 
+          <img class="icono" src="ICO/Airtable.svg" width="40"alt ="Open"> 
         </div>
         <div class="col-md-4 text-center">
-          <h3 class="text-success" style="font-size: 1.5rem;">Herramientas de Diseño</h3>
-          <i class="fab fa-adobe fa-2x text-success"></i> <!-- Icono de Adobe -->
-          <i class="fas fa-image fa-2x text-success"></i> <!-- Icono de Imagen -->
-          <i class="fas fa-video fa-2x text-success"></i> <!-- Icono de Video -->
+          <h3 class="text" style="font-size: 1rem;">Herramientas de Diseño</h3>
+          <img class="icono" src="ICO/Adobe.svg" alt="Microsoft Office"> 
+          <img class="icono" src="ICO/Figma.svg" alt="Microsoft Office"> 
+          <img class="icono" src="ICO/Blender.svg" alt="Microsoft Office"> 
+          <img src="" alt="">
         </div>
         <div class="col-md-4 text-center">
-          <h3 class="text-warning" style="font-size: 1.5rem;">Herramientas de Programación</h3>
-          <i class="fab fa-html5 fa-2x text-warning"></i> <!-- Icono de HTML5 -->
-          <i class="fab fa-css3-alt fa-2x text-warning"></i> <!-- Icono de CSS3 -->
-          <i class="fab fa-js fa-2x text-warning"></i> <!-- Icono de JavaScript -->
-        </div>
+          <h3 class="text" style="font-size: 1rem;">H. de Programación / Frameworks</h3>
+
+          <i class="icono fab fa-java fa-2x text-warning"></i> <!-- Icono de Java -->
+          <i class="icono fab fa-php fa-2x" style="color:blue"></i> <!-- Icono de PHP -->
+          <i class="icono fab fa-git fa-2x text" style="color:rgb(239, 156, 48)"></i> <!-- Icono de Git -->
+          <i class="icono fas fa-database fa-2x text"  style="color:rgb(28, 28, 87)"></i> <!-- Icono de Base de Datos -->
+          <i class="icono fab fa-js fa-2x text-warning"></i> <!-- Icono de JavaScript -->
+          <i class="icono fab fa-css3-alt fa-2x text" style="color:rgb(0, 132, 255)"></i> <!-- Icono de CSS -->
+          <i class="icono fab fa-html5 fa-2x text" style="color:rgb(223, 234, 15)"></i> <!-- Icono de HTML -->
+          
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  // Animación con GSAP
+  gsap.from(".navbar", { duration: 0, y: 100, opacity: 0, ease: "power4.out" });
+  gsap.from("#Contenido", { duration: 1, y: 100, opacity: 0, ease: "power4.out", delay: 1 });
+  gsap.from(".icono", { duration: 0.5, opacity: 0, y: 20, stagger: 0.2, delay: 2 });
+
+  // Efecto al quitar el cursor del icono
+  gsap.to(".icono", {
+    scale: 1, // Vuelve al tamaño original
+    ease: "power1.inOut",
+    cursor: "auto", // Restablece el cursor
+    boxShadow: "none", // Quita la sombra
+    duration: 0.3
+  });
+
+  // Registra eventos de mouseenter y mouseleave para cada icono
+  document.querySelectorAll(".icono").forEach(icono => {
+    icono.addEventListener("mouseenter", () => {
+      gsap.to(icono, { scale: 1.5, duration: 0.3 });
+    });
+    icono.addEventListener("mouseleave", () => {
+      gsap.to(icono, { scale: 1, duration: 0.3 });
+    });
+  });
+</script>
+
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

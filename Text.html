@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra de Navegación</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/Estilos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img id="logo" src="IMG/Destroid1.webp" alt="Logo" height="100">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Experiencia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Educación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="contenido" id="Contenido" >
+  <div class="container mt-0">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="text-center display-4" style="color: #333;">Experto en Tecnología y Multimedia</h1>
+        <h2 class="text-center small-title" style="font-size: 2rem; color: #666;">Gestor de Proyectos Digitales</h2>
+        <p class="lead text-center text-justify">
+          Técnico, Tecnólogo en sistemas y producción en multimedia, estudiante de 
+          ingeniería en sistemas, con conocimientos en; Instalación de BIOS, 
+          Programación en PHP, JavaScript, Python, desarrollo UX/UI, maquetación y prototipado, 
+          con desarrollo de páginas web, manejo en redes sociales y creación de contenido, 
+          fotomontaje, efectos especiales enfocado en videos, modelo en 3D o renderizados, 
+          Inteligencia artificial, con dominio en paquete office y Excel avanzado.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-10 mx-auto">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <h3 class="text" style="font-size: 1rem;">Herramientas de Oficina</h3>
+          <img class="icono" src="ICO/Microsoft.svg" alt="Microsoft Office"> <!-- Icono personalizado de Microsoft Office -->
+          <img class="icono" src="ICO/Notion.svg" alt="Notion"> 
+          <img class="icono" src="ICO/Airtable.svg" width="40"alt ="Open"> 
+        </div>
+        <div class="col-md-4 text-center">
+          <h3 class="text" style="font-size: 1rem;">Herramientas de Diseño</h3>
+          <img class="icono" src="ICO/Adobe.svg" alt="Microsoft Office"> 
+          <img class="icono" src="ICO/Figma.svg" alt="Microsoft Office"> 
+          <img class="icono" src="ICO/Blender.svg" alt="Microsoft Office"> 
+          <img src="" alt="">
+        </div>
+        <div class="col-md-4 text-center">
+          <h3 class="text" style="font-size: 1rem;">H. de Programación / Frameworks</h3>
+
+          <i class="icono fab fa-java fa-2x text-warning"></i> <!-- Icono de Java -->
+          <i class="icono fab fa-php fa-2x" style="color:blue"></i> <!-- Icono de PHP -->
+          <i class="icono fab fa-git fa-2x text" style="color:rgb(239, 156, 48)"></i> <!-- Icono de Git -->
+          <i class="icono fas fa-database fa-2x text"  style="color:rgb(28, 28, 87)"></i> <!-- Icono de Base de Datos -->
+          <i class="icono fab fa-js fa-2x text-warning"></i> <!-- Icono de JavaScript -->
+          <i class="icono fab fa-css3-alt fa-2x text" style="color:rgb(0, 132, 255)"></i> <!-- Icono de CSS -->
+          <i class="icono fab fa-html5 fa-2x text" style="color:rgb(223, 234, 15)"></i> <!-- Icono de HTML -->
+          
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  gsap.from(".navbar", {duration: 1, y: 100, opacity: 0, ease: "power4.out"});
+  gsap.from("#Contenido", {duration: 2, y: 100, opacity: 0, ease: "power4.out", delay: 0});
+  gsap.from(".icono", {duration: 0.5, opacity: 0, y: 20, stagger: 0.2, delay: 3});
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
