@@ -6,8 +6,8 @@
   <title>Barra de Navegación</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="CSS/Estilos.css">
-  
- 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
@@ -48,44 +48,11 @@
     </div>
   </nav>
 </header>
-<script>
-  // Obtiene la imagen por su ID
-  var logo = document.getElementById('logo');
-
-  // Función para cambiar la imagen y rotar al pasar el mouse sobre ella
-  logo.addEventListener('mouseenter', function() {
-    // Verifica qué imagen está actualmente en uso
-    if (logo.src.includes('Destroid1.webp')) {
-      // Si es la primera imagen, cambia a la segunda
-      logo.src = 'IMG/Destroid2.webp';
-    } else {
-      // Si es la segunda imagen, cambia a la primera
-      logo.src = 'IMG/Destroid1.webp';
-    }
-
- 
-  });
-
-  // Restablece la rotación y la imagen original al quitar el mouse de la imagen
-  logo.addEventListener('mouseleave', function() {
-    logo.src = 'IMG/Destroid1.webp'; // Cambia a la primera imagen cuando el mouse se va
-  });
-</script>
-<main>
-  <!-- Contenido principal de la página -->
+<script src="Js/main.js"></script>
+<main class="contenido">
+  
 </main>
 
-<script>
-  // Cambiar el logo cuando se desplaza hacia abajo
-  window.addEventListener('scroll', function() {
-    var logo = document.getElementById('logo');
-    if (window.scrollY > 50) {
-      logo.src = 'IMG/Destroid1.webp';
-    } else {
-      logo.src = 'IMG/Destroid1.webp';
-    }
-  });
-</script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
