@@ -44,7 +44,9 @@ body {
   width: 100px;
   height: 100px;
 }
-
+.row{
+  color: #000000;
+}
 .logo-normal, .logo-hover {
   position: absolute;
   top: 0;
@@ -82,7 +84,15 @@ body {
 
 /* Contendio de la pagina */
 .contenido{
-  color: aqua;
+  background-color: aliceblue;
+  transition: background-image 1s ease;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.contenido:hover {
+  background-image: url(../IMG/Fondo-Claro.gif);
+  background-size: cover;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {

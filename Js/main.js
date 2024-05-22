@@ -43,3 +43,6 @@ gsap.to(".mi-elemento", {
   logo.addEventListener('mouseleave', function() {
     logo.src = 'IMG/Destroid1.webp'; // Cambia a la primera imagen cuando el mouse se va
   });
+  
+  
+  
