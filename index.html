@@ -28,16 +28,8 @@
             <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Perfil</a>
+            <a class="nav-link" href="Perfil.html">Perfil</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Experiencia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Educación</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Habilidades</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Proyectos</a>
@@ -50,7 +42,7 @@
     </div>
   </nav>
 </header>
-<script src="Js/main.js"></script>
+
 
 
 <main class="contenido" id="Contenido" >
@@ -105,34 +97,7 @@
     </div>
   </div>
 </div>
-
-<script>
-  // Animación con GSAP
-  gsap.from(".navbar", { duration: 0, y: 100, opacity: 0, ease: "power4.out" });
-  gsap.from("#Contenido", { duration: 1, y: 100, opacity: 0, ease: "power4.out", delay: 1 });
-  gsap.from(".icono", { duration: 0.5, opacity: 0, y: 20, stagger: 0.2, delay: 2 });
-
-  // Efecto al quitar el cursor del icono
-  gsap.to(".icono", {
-    scale: 1, // Vuelve al tamaño original
-    ease: "power1.inOut",
-    cursor: "auto", // Restablece el cursor
-    boxShadow: "none", // Quita la sombra
-    duration: 0.3
-  });
-
-  // Registra eventos de mouseenter y mouseleave para cada icono
-  document.querySelectorAll(".icono").forEach(icono => {
-    icono.addEventListener("mouseenter", () => {
-      gsap.to(icono, { scale: 1.5, duration: 0.3 });
-    });
-    icono.addEventListener("mouseleave", () => {
-      gsap.to(icono, { scale: 1, duration: 0.3 });
-    });
-  });
-</script>
-
-
+<script src="Js/main.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
